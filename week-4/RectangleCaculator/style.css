@@ -1,0 +1,282 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+
+    background:
+        linear-gradient(135deg,
+            #e8f5e9 0%,
+            #f4fbf5 45%,
+            #e3f2fd 100%);
+}
+
+
+/* ================================
+   CONTAINER / CARD
+================================ */
+
+.container {
+    width: 100%;
+    max-width: 560px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.10),
+        0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.container h2 {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 28px;
+    line-height: 1.3;
+
+    color: #222;
+}
+
+
+/* ================================
+   LABEL
+================================ */
+
+.container label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #444;
+}
+
+
+/* ================================
+   INPUT
+================================ */
+
+.container input {
+    width: 100%;
+    height: 52px;
+
+    margin-bottom: 20px;
+    padding: 0 16px;
+
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    font-size: 16px;
+    color: #333;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Input hover */
+
+.container input:hover {
+    border-color: #cfcfcf;
+    background: #ffffff;
+}
+
+
+/* Input focus */
+
+.container input:focus {
+    border-color: #4caf50;
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(76, 175, 80, 0.12);
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.container button {
+    width: 100%;
+    height: 54px;
+
+    margin-top: 4px;
+    margin-bottom: 30px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg,
+            #4caf50,
+            #43a047);
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(76, 175, 80, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Button hover */
+
+.container button:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg,
+            #43a047,
+            #388e3c);
+
+    box-shadow:
+        0 12px 24px rgba(76, 175, 80, 0.30);
+}
+
+
+/* Button active */
+
+.container button:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 12px rgba(76, 175, 80, 0.20);
+}
+
+
+/* ================================
+   RESULT TITLE
+================================ */
+
+.container h3 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+
+    color: #222;
+}
+
+
+/* ================================
+   RESULT BOX
+================================ */
+
+.container p {
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 12px;
+    padding: 14px 16px;
+
+    border-left: 5px solid #4caf50;
+    border-radius: 8px;
+
+    background: #f7f7f7;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    color: #555;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 25px 20px;
+
+        border-radius: 16px;
+    }
+
+    .container h2 {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+
+    .container input {
+        height: 50px;
+    }
+
+    .container button {
+        height: 52px;
+    }
+
+    .container p {
+        font-size: 15px;
+    }
+}
+
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+
+    .container {
+        padding: 22px 16px;
+    }
+
+    .container h2 {
+        font-size: 21px;
+    }
+}
