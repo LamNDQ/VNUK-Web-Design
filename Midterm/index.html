@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+
+        <h2>Web Xem Phim Online</h2>
+
+        <nav>
+            <a href="#">Trang Chủ</a>
+            <a href="#">Thể Loại</a>
+            <a href="#">Phim Mới</a>
+            <a href="#">Phim Hot</a>
+            <a href="#">Tài Khoản</a>
+        </nav>
+
+        <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <div class="title-area">
+            <button class="add-btn" onclick="openAddForm()">
+                + Thêm Phim
+            </button>
+        </div>
+
+
+        <!-- Loading -->
+        <p id="loading">
+            Đang tải phim...
+        </p>
+
+
+        <!-- Error -->
+        <p id="error"></p>
+
+
+        <!-- Movie list -->
+        <div id="movieList" class="movie-list">
+        </div>
+
+    </main>
+
+    <!-- Form Modal -->
+    <div id="movieModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeForm()">
+                ×
+            </button>
+
+            <h2 id="formTitle">
+                Thêm Phim
+            </h2>
+
+
+            <form id="movieForm">
+
+                <!-- ID -->
+                <input type="hidden" id="movieId">
+
+
+                <!-- Tên phim -->
+                <label>
+                    Tên phim
+                </label>
+
+                <input type="text" id="tenPhim" required>
+
+
+                <!-- Thời lượng -->
+                <label>
+                    Thời lượng (phút)
+                </label>
+
+                <input type="number" id="thoiLuong" required>
+
+
+                <!-- Năm -->
+                <label>
+                    Năm phát hành
+                </label>
+
+                <input type="number" id="namPhatHanh" required>
+
+
+                <!-- Đánh giá -->
+                <label>
+                    Đánh giá
+                </label>
+
+                <input type="number" id="danhGia" min="0" max="100" required>
+
+
+                <!-- Lượt xem -->
+                <label>
+                    Lượt xem
+                </label>
+
+                <input type="number" id="luotXem" min="0" required>
+
+
+                <!-- Poster -->
+                <label>
+                    Link Poster
+                </label>
+
+                <input type="text" id="anhPoster" placeholder="https://..." required>
+
+
+                <!-- Mô tả -->
+                <label>
+                    Mô tả
+                </label>
+
+                <textarea id="moTa" rows="3"></textarea>
+
+
+                <button type="submit" class="save-btn">
+                    Lưu Phim
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="movies.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
