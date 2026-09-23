@@ -155,9 +155,9 @@ document.getElementById("searchInput").addEventListener("input", async (e) => {
     try {
         const phim = new Phim();
         const movies = await phim.show();
-    const filtered = movies.filter(m =>
-        m.tenPhim.toLowerCase().includes(keyword)
-    );
+        const filtered = movies.filter(m =>
+            m.tenPhim.toLowerCase().includes(keyword)
+        );
 
         const movieList = document.getElementById("movieList");
         movieList.innerHTML = "";
